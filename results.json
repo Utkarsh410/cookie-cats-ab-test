@@ -1,0 +1,111 @@
+{
+  "n_total": 90189,
+  "zero_round_share": 0.0443,
+  "srm": {
+    "gate_30": 44700,
+    "gate_40": 45489,
+    "chi2": 6.9,
+    "p": 0.0086
+  },
+  "mde": {
+    "retention_1": {
+      "baseline": 0.4482,
+      "mde_abs_pp": 0.93
+    },
+    "retention_7": {
+      "baseline": 0.1902,
+      "mde_abs_pp": 0.73
+    }
+  },
+  "n_req_1pp_ret7": 23684,
+  "bootstrap": {
+    "retention_1": {
+      "mean_pp": 0.6,
+      "ci": [
+        -0.06,
+        1.25
+      ],
+      "p_gate30_better": 0.9618
+    },
+    "retention_7": {
+      "mean_pp": 0.82,
+      "ci": [
+        0.31,
+        1.33
+      ],
+      "p_gate30_better": 0.9994
+    }
+  },
+  "bayes": {
+    "retention_1": {
+      "p_gate30_better": 0.96269,
+      "loss_choose_40_pp": 0.59482,
+      "loss_choose_30_pp": 0.00496
+    },
+    "retention_7": {
+      "p_gate30_better": 0.99918,
+      "loss_choose_40_pp": 0.81934,
+      "loss_choose_30_pp": 6e-05
+    }
+  },
+  "rounds": {
+    "median_30": 17.0,
+    "median_40": 16.0,
+    "mean_30": 51.34,
+    "mean_40": 51.3,
+    "p_mannwhitney": 0.0509,
+    "p_welch": 0.9495,
+    "mean_diff_ci": [
+      -1.32,
+      1.36
+    ]
+  },
+  "holm": [
+    {
+      "test": "1-day retention",
+      "raw_p": 0.07441,
+      "holm_p": 0.10178,
+      "significant": false
+    },
+    {
+      "test": "7-day retention",
+      "raw_p": 0.00155,
+      "holm_p": 0.00466,
+      "significant": true
+    },
+    {
+      "test": "Game rounds (Mann-Whitney)",
+      "raw_p": 0.05089,
+      "holm_p": 0.10178,
+      "significant": false
+    }
+  ],
+  "peeking": {
+    "fixed_fpr": 0.042,
+    "peek_fpr": 0.215
+  },
+  "retention": [
+    {
+      "metric": "retention_1",
+      "gate_30": 0.448188,
+      "gate_40": 0.442283,
+      "diff_pp": -0.590517,
+      "ci_lo_pp": -1.239244,
+      "ci_hi_pp": 0.05821,
+      "rel_change": -0.013176,
+      "z": 1.784086,
+      "p_value": 0.07441
+    },
+    {
+      "metric": "retention_7",
+      "gate_30": 0.190201,
+      "gate_40": 0.182,
+      "diff_pp": -0.82013,
+      "ci_lo_pp": -1.328155,
+      "ci_hi_pp": -0.312104,
+      "rel_change": -0.043119,
+      "z": 3.164359,
+      "p_value": 0.001554
+    }
+  ]
+}
